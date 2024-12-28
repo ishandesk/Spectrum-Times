@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spectrum Times</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="icon" type="image/png" href="imp.png">
+</head>
+<body>
+
+    <nav>
+        <div class="top-header container flex">
+            <div class="top-headline flex">
+                <span class="headline-label"><strong>Top Headline:</strong></span>
+                <marquee id="top-headline" behavior="scroll" direction="left" scrollamount="6">Breaking News: Stay tuned for the latest updates!</marquee>
+            </div>
+            <div class="weather-info flex">
+                <span id="weather-data">Fetching weather data...</span>
+            </div>
+        </div>
+
+        <div class="main-nav container flex">
+            <a href="#" onclick="reload()" class="company-logo">
+                <img src="/imp.png" alt="company logo">
+            </a>
+            <div class="nav-links">
+                <ul class="flex">
+                    <li class="hover-link nav-item" id="sports" onclick="onNavItemClick('sports')">Sports<i class="fa-solid fa-football"></i></li>
+                    <li class="hover-link nav-item" id="finance" onclick="onNavItemClick('finance')">Finance<i class="fa-solid fa-coins"></i></li>
+                    <li class="hover-link nav-item" id="politics" onclick="onNavItemClick('politics')">Politics<i class="fa-solid fa-landmark"></i></li>
+                    <li class="hover-link nav-item" id="tech" onclick="onNavItemClick('tech')">Tech<i class="fa-solid fa-microchip"></i></li>
+                    <li class="hover-link nav-item" id="entertainment" onclick="onNavItemClick('entertainment')">Entertainment<i class="fa-solid fa-film"></i></li>
+                    <li class="hover-link nav-item" id="environmental" onclick="onNavItemClick('environmental')">Environmental<i class="fa-solid fa-seedling"></i></li>
+                    
+                </ul>
+            </div>
+            <div class="search-bar flex">
+                <input id="search-text" type="text" class="news-input" placeholder="e.g. Science">
+                <button id="search-button" class="search-button">Search</button>
+            </div>
+            <button id="dark-mode-toggle" class="dark-mode-toggle"><i class="fa-solid fa-moon"></i></button>
+        </div>
+    </nav>
+    
+
+    <main>
+        <div class="cards-container container flex" id="cards-container">
+            
+        </div>
+    </main>
+
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">This is the Title</h3>
+                <h6 class="news-source" id="news-source">End Gadget 26/08/2023</h6>
+                <p class="news-desc" id="news-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe quis voluptatum quisquam vitae doloremque facilis molestias quae ratione cumque!</p>
+            </div>
+        </div>
+    </template>
+
+    <script src="script.js"></script>
+</body>
+</html> 
